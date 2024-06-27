@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./JS/main.js" defer></script>
+
+</head>
+
+<body>
+    <div class="container" id="startContainer">
+        <label class="nickname-req" for="nickname">Enter your nickname:</label>
+        <input type="text" id="nickname" />
+        <button id="startGameButton">Start Game</button>
+    </div>
+
+    <div class="container" id="quizContainer" style="display:none;">
+        <h1>Quiz Questions</h1>
+        <div id="questionContainer"></div>
+        <div id="optionsContainer"></div>
+        <button id="submitAnswerButton">Submit Answer</button>
+        <div id="timer">Time: <span id="time">10</span>s</div>
+    </div>
+
+    <div class="container" id="resultContainer" style="display:none;">
+        <h1 id="resultMessage"></h1>
+        <p id="timeTaken"></p>
+        <button id="restartGameButton">Restart Game</button>
+    </div>
+
+    <div class="container" id="highScoreLink" style="display:none;">
+        <h1 id="highscoreMessage"></h1>
+        <p id="highscore"></p>
+        <button id="showHighScoreButton">Highscores</button>
+    </div>
+</body>
+
+</html>
