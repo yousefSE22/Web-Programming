@@ -1,0 +1,343 @@
+/* ../css/style.css */
+
+/*Youssef Younes*/
+
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  position: relative;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 50px;
+}
+
+header img {
+  width: 100%;
+  max-width: 300px; /* Adjust the maximum width as needed */
+  height: auto;
+  border-radius: 50%; /* Create a circular shape for the image */
+}
+
+header h1 {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+/* Navbar styles */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Article styles */
+article {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+article p {
+  margin-bottom: 20px;
+}
+
+.small-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  float: left;
+  margin-right: 20px;
+}
+
+article::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+/*typography*/
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+body.special-page {
+  background-color: lightseagreen; 
+  align-items: center;
+  text-align: center;
+}
+
+
+
+th, td{
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: left;
+}
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px; /* Add more padding for a nicer look */
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+footer div {
+  flex: 1;
+  text-align: center;
+
+}
+
+.Author-box {
+  border-radius: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 10px; /* Increase margin for better spacing */
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold; /* Add bold font for emphasis */
+  transition: color 0.3s; /* Add a smooth color transition effect */
+}
+
+footer a:hover {
+  color: lightskyblue; /* Change color on hover */
+}
+
+/* Author image styles */
+.author-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* Form styles */
+form {
+  max-width: 400px; /* Set a maximum width for the form */
+  margin: 20px auto; /* Center the form horizontally */
+  padding: 20px;
+  background-color: #333;
+  border-radius: 5%;
+  
+
+}
+
+/* Form input styles */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: whitesmoke
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Form submit button styles */
+form button {
+  background-color: whitesmoke;
+  color: #333;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Form submit button hover effect */
+form button:hover {
+  background-color: lightgrey;
+}
+
+
+/*about*/
+
+.container2 {
+  display: flex;
+}
+
+.main-column2 {
+  flex: 2; /* The main column takes up 2/3 of the container */
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+}
+
+.aside-column2 {
+  flex: 1; /* The aside column takes up 1/3 of the container */
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Style for the image in the main column */
+.webPicture {
+  width: 100%;
+  height: auto;
+}
+/* stylelint-disable-next-line no-descending-specificity */
+.aside-column2 a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: background-color 0.3s;
+}
+
+.aside-column2 a:hover {
+  background-color: #ddd;
+}
+
+/* Style for the header in the aside column */
+.aside-column2 h2 {
+  color: #555;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+/* Style for the list items in the aside column */
+.aside-column2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aside-column2 li {
+  margin-bottom: 8px;
+}
+
+/*column 3*/
+.container3 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+}
+
+.container3 aside,
+.container3 main {
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd; /* Add borders */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.container3 main {
+  flex: 2;
+  background-color: white;
+}
+
+.container3 aside {
+  flex: 1;
+  background-color: #f4f4f4;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+img {
+  max-width: 100%;
+  border: 5px solid #ddd; /* Add borders */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* Add border radius */
+}
+
+/* Media Query for smaller screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  /* Navbar */
+  nav ul {
+    text-align: center; 
+    padding-top: 10px; 
+  }
+
+  nav li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px; 
+  }
+
+  /* Container for 3 columns */
+  .container3 {
+    flex-direction: column; /* Stack the columns in a vertical layout */
+  }
+
+  .container3 .left-column,
+  .container3 .main-column,
+  .container3 .right-column {
+    flex: 1; /* Full width for each column on smaller screens */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+
+  /* Style for images within the columns */
+.container3 img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  border-radius: 8px;
+}
+
+  /* Footer */
+  footer {
+    flex-direction: column; /* Stack the footer links in a vertical layout */
+    align-items: center; /* Center-align the footer content */
+  }
+
+  footer div {
+    text-align: center;
+    margin-bottom: 20px; /* Add margin between footer sections */
+  }
+
+  footer ul li {
+    margin-bottom: 10px;
+  }
+}
+
