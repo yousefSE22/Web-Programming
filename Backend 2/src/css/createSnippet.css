@@ -1,0 +1,124 @@
+.create-snippet {
+  margin: 30px;
+  background-color: #EDDCD9;
+  border: 2px solid #264143;
+  border-radius: 20px;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 4px 0px 1px;
+}
+
+.create-snippet div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+#create-snippet-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#create-snippet-form label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#create-snippet-form input[type="text"],
+#create-snippet-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+#create-snippet-form textarea {
+  background-color: #ccc;
+}
+
+#create-snippet-form textarea.snippet {
+  height: 200px;
+  width: 100%;
+}
+
+#create-snippet-form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.snippet-save {
+  --color: #560bad;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.snippet-save:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: all .4s;
+}
+
+.snippet-save:hover {
+  color: #fff;
+}
+
+.snippet-save:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+.snippet-save:active::before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+
+#private {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px rgb(183, 183, 183);
+}
+
+#private input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border-radius: 5px;
+}

@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #d4d4d4;
+    align-items: center;
+    margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: grey;
+  background-color: #313131;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px
+
+  
+
+  }
+  
+  .home-content{
+    background-color: #e0e0e0;
+    box-shadow: 2px 2px 20px #bebebe, -2px -2px 20px #ffffff;
+    color: black;
+    border-radius: 50px;
+    margin: 100px;
+    margin-left: 150px;
+    padding: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+

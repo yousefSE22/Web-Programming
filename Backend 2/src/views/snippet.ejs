@@ -1,0 +1,81 @@
+<%- include('header') -%>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+
+<script>
+  hljs.highlightAll();
+
+  async function handleDelete(url) {
+    try {
+      const response = await fetch(url, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (response.status === 204) {
+        window.location.href = '/snippet';
+      } else {
+        console.error('Failed to delete snippet');
+      }
+    } catch (error) {
+      console.error('Error deleting snippet:', error);
+    }
+  }
+</script>
+
+<div class="snippets-page-head">
+  <h1>Snippets</h1>
+  <% if (user) { %>
+    <button class="create-link" onclick="location.href='/snippet/create'">Create New Snippet</button>
+  <% } %>
+
+  <% if (!snippets || snippets.length === 0) { %>
+    <p>No snippets found.</p>
+  <% } %>
+</div>
+
+<% if (snippets) { %>
+  <div class="snippets-page<%= (snippets.length === 1) ? ' single' : '' %>">
+    <% snippets.forEach(snippet => { %>
+      <div class="snippet" id="<%= snippet.id %>">
+        <div class="snippet-top">
+          <div class="snippet-title">
+            <h4><%= snippet.title %></h4>
+          </div>
+          
+          <% if (user && user.id === snippet.createdBy) { %>
+            <div class="edit-delete-btns">
+              <button class="edit-link" onclick="location.href='/snippet/<%= snippet.id %>/update'">Edit</button>
+              <button class="delete-link" onclick="handleDelete('/snippet/<%= snippet.id %>/delete')">Delete</button>
+            </div>
+          <% } %>
+        </div>
+
+        <div class="snippet-info">
+          <div>
+            <h4>Creator:</h4>
+            <p><%= snippet.creator %></p>
+          </div>
+          <div>
+            <h4>Created at:</h4>
+            <p><%= snippet.createdAt.toLocaleString('en-US', { weekday: 'long', month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' }) %></p>
+          </div>
+          <div>
+            <h4>Last updated:</h4>
+            <p><%= snippet.updatedAt.toLocaleString('en-US', { weekday: 'long', month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' }) %></p>
+          </div>
+          <div>
+            <h4>Language:</h4>
+            <p><%= snippet.language %></p>
+          </div>
+        </div>
+
+        <div class="snippet-description">
+          <h4>Description:</h4>
+          <p><%= snippet.description %></p>
+        </div>
+
+        <pre class="code"><code class="<%= snippet.language %>"><%= snippet.snippet %></code></pre>
+      </div>
+    <% }); %>
+  </div>
+<% } %>
